@@ -332,6 +332,8 @@ sed -n '2,4{s/^/$/;p}' file23
 sed -n '2,4{s/$/*/;p}' file23
 # OUTPUT
 ![Alt text](images/seq($*p).png)
+
+
 #Sorting File content
 cat > file21
 ```
@@ -341,9 +343,12 @@ cat > file21
 1005 | Sam |  5000 | HR
 1004 | Sit |  7000 | Dev
 ``` 
+![Alt text](images/file21.png)
+
 sort file21
 ## OUTPUT
 
+![Alt text](images/file21sort.png)
 
 cat > file22
 ```
@@ -357,12 +362,15 @@ cat > file22
 uniq file22
 ## OUTPUT
 
+![Alt text](images/file22(uniq).png)
 
 
-#Using tr command
+# Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+
+ ![Alt text](images/file23(tr).png)
 
 cat < urllist.txt
 ```
@@ -371,28 +379,34 @@ www. google. com
 www. mrcet.... com
 ^d
  ```
+![Alt text](images/urllistOutput.png)
+
 cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
  ```
+![Alt text](images/urllist.png)
+
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-
+![Alt text](images/urllist(tr-d-only).png)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
+![Alt text](images/file23(tr).png)
 
-
-#Backup commands
+# Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
 
+![Alt text](images/backup(tar).png)
 
 mkdir backupdir
+
  
 mv backup.tar backupdir
 
@@ -401,17 +415,16 @@ cd backupdir
 tar -tvf backup.tar
 ## OUTPUT
 
+![Alt text](images/backup(mkdir).png)
 
 tar -xvf backup.tar
 ## OUTPUT
+![Alt text](images/backup(xvftar).png)
 
 gzip backup.tar
-
 ls .gz
 ## OUTPUT
- 
-gunzip backup.tar.gz
-## OUTPUT
+ ![Alt text](images/gzip(backup).png)
 
  
 # Shell Script
