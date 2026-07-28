@@ -103,6 +103,7 @@ Hello world
 hello world
  ```
 
+
 ![Alt text](images/newfile.png)
 
 cat < newfile 
@@ -200,38 +201,40 @@ egrep '(^hello)' newfile
 egrep '(world$)' newfile 
 ## OUTPUT
 
-
+![Alt text](images/egrep-world.png)
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+![Alt text](images/egrep-World.png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+![Alt text](images/egrep-W%7Cworld.png)
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+![Alt text](images/egrep(1-9).png)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
 
-
-egrep 'Linux.*World' newfile 
-## OUTPUT
+![Alt text](images/egrep(Linux).png)
 
 
 egrep l{2} newfile
 ## OUTPUT
-
+![Alt text](images/egrepl{2}.png)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
 
+![Alt text](images/egrep(s_1,2).png)
 
 cat > file23
 ```
@@ -246,84 +249,89 @@ cat > file23
 ^d
 ```
 
+![Alt text](images/file23.png)
+
 
 sed -n -e '3p' file23
 ## OUTPUT
+![Alt text](images/file23sed.png)
 
 
 
 sed -n -e '$p' file23
 ## OUTPUT
-
-
+![Alt text](images/file23sed1.png)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![Alt text](images/file23(ram).png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
+![Alt text](images/file23(ram2).png)
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![Alt text](images/file23(tom).png)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![Alt text](images/file23(-n-e).png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](images/file23(Joe).png)
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](images/file23(tom-joe).png)
 
 seq 10 
 ## OUTPUT
 
-
+![Alt text](images/seq-10.png)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-
+![Alt text](images/seq-10(sed-n).png)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+![Alt text](images/seq(2-4).png)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![Alt text](images/seq(hello).png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
 
+![Alt text](images/seq(21hello).png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![Alt text](images/seq(1-9hello).png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
+![Alt text](images/seq(10%7C$).png)
 
 
 sed -n '2,4{s/$/*/;p}' file23
-
-
+# OUTPUT
+![Alt text](images/seq($*p).png)
 #Sorting File content
 cat > file21
 ```
