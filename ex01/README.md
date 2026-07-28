@@ -22,44 +22,37 @@ Testing the commands for the desired output.
 
 # COMMANDS:
 ### Create the following files file1, file2 as follows:
+
 cat > file1
-```
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
-^d
-```
+![Alt text](images/file1Input.png)
+
 cat > file2
-```
-anil aggarwal
-barun sengupta
-c.k. shukla
-lalit chowdury
-s.n. dasgupta
-^d
-```
+![Alt text](images/file1Input.png)
 ### Display the content of the files
 cat < file1
 ## OUTPUT
 
+![Alt text](images/file1Output.png)
 
 
 cat < file2
 ## OUTPUT
 
+![Alt text](images/file2Output.png)
+
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+![Alt text](images/cmp.png)
  
 comm file1 file2
  ## OUTPUT
-
+![Alt text](images/comm.png)
  
 diff file1 file2
 ## OUTPUT
-
+![Alt text](images/diff.png)
 
 #Filters
 
@@ -71,6 +64,9 @@ Hello world
 This is my world
 ^d
 ```
+![Alt text](images/file11.png)
+
+
 cat > file22
 ```
 1001 | Ram | 10000 | HR
@@ -78,22 +74,36 @@ cat > file22
 1003 | Joe |  7000 | Developer
 ^d
 ```
+![Alt text](images/file22.png)
 
 
 cut -c1-3 file11
 ## OUTPUT
 
-
+![Alt text](images/cutfile11.png)
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
-
+![Alt text](images/cutfile22.png)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
+![Alt text](images/file22cut.png)
+
+
+
+### Create the following newfile:
+
+cat > newfile 
+```
+Hello world
+hello world
+ ```
+
+![Alt text](images/newfile.png)
 
 cat < newfile 
 ```
@@ -101,37 +111,35 @@ Hello world
 hello world
 ^d
 ````
-cat > newfile 
-Hello world
-hello world
- 
+![Alt text](images/newfileoutput.png)
+
 grep Hello newfile 
 ## OUTPUT
 
+![Alt text](images/grep.png)
 
 
 grep hello newfile 
 ## OUTPUT
 
-
+![Alt text](images/grep2.png)
 
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+![Alt text](images/grep-v.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
+![Alt text](images/grep-i.png)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
-
+![Alt text](images/grep-i-c.png)
 
 grep -R ubuntu /etc
 ## OUTPUT
@@ -139,18 +147,11 @@ grep -R ubuntu /etc
 
 
 grep -w -n world newfile   
+
 ## OUTPUT
 
+![Alt text](images/grep-n-w.png)
 
-cat < newfile 
-```
-Hello world
-hello world
-Linux is world number 1
-Unix is predecessor
-Linux is best in this World
-^d
-```
 
 cat > newfile
 ```
@@ -161,26 +162,40 @@ Unix is predecessor
 Linux is best in this World
 ^d
  ```
+![Alt text](images/newfile1.png)
+
+
+cat < newfile 
+```
+Hello world
+hello world
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
+^d
+```
+![Alt text](images/newfile1output1.png)
+
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+![Alt text](images/egrep.png)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-
+![Alt text](images/egrep(hello).png)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
+![Alt text](images/egrep-w(h%7CH).png)
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
-
+![Alt text](images/egrep-%5E.png)
 
 egrep '(world$)' newfile 
 ## OUTPUT
