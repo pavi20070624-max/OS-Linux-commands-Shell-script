@@ -434,8 +434,9 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
-## OUTPUT
 
+## OUTPUT
+![Alt text](images/myscript.png)
  
 cat << stop > herecheck.txt
 ```
@@ -447,9 +448,9 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+![Alt text](images/herecheck.png)
 
-
-cat < scriptest.sh 
+cat > scriptest.sh 
 ```bash
 \#!/bin/sh
 echo “File name is $0 ”
@@ -486,24 +487,35 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
- 
+ ![Alt text](images/scriptest1.png)
+ ![Alt text](images/scriptest(2).png)
+
 ls file1
 ## OUTPUT
 
+![Alt text](images/file1ls.png)
+
 echo $?
 ## OUTPUT 
+
+![Alt text](images/file1(echo).png)
+
+
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
- 
+ ![Alt text](images/touchone.png)
+ ![Alt text](images/one(echo).png)
+
+
 abcd
- 
+
 echo $?
  ## OUTPUT
 
-
+![Alt text](images/abcd.png)
  
 # mis-using string comparisons
 
@@ -533,7 +545,7 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
+## OUTPUT
 
 
 
