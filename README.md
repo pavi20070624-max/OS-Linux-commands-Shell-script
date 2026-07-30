@@ -795,7 +795,9 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
+
  ![Alt text](images/casecheck.png)
+
 cat > whiletest
 ```bash
 #!/bin/bash
@@ -810,7 +812,8 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+## OUTPUT 
+![Alt text](images/whiletest.png)
  
 cat untiltest.sh 
 ```bash
@@ -825,7 +828,9 @@ done
 $ chmod 755 untiltest.sh
  
  
- 
+##  OUTPUT
+![Alt text](images/untiltest.png)
+
 cat forin1.sh 
 ```bash
 \#!/bin/bash
@@ -838,7 +843,10 @@ done
  
 $ chmod 755 forin1.sh
  
- 
+ ## OUTPUT
+ ![Alt text](images/forin1.png)
+
+
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -851,42 +859,9 @@ done
  
 $ chmod 755 forin2.sh
  
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-$ chmod 755 forin2.sh
- 
-$ ./forin2.sh 
- 
-cat forin3.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don\'t know if "this'll" work
-do
-echo "word:$test"
-done
-```
-$ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
-
 ## OUTPUT
+![Alt text](images/forin2.png)
+ 
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -898,17 +873,9 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
-Hyderabad
-Alampur
-Basara
-Warangal
-Adilabad
-Bhadrachalam
-Khammam
 
 ## OUTPUT
-
+![Alt text](images/forinfile.png)
 
 cat forctype.sh 
 ```bash
