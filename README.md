@@ -532,6 +532,7 @@ echo "$val1 is less than $val2"
 fi
 ^d
 ```
+![Alt text](images/strcomp.png)
 
 cat strcomp.sh 
 ```bash
@@ -547,6 +548,7 @@ fi
 ```
 ## OUTPUT
 
+![Alt text](images/strcomp(output).png)
 
 
 chmod 755 strcomp.sh
@@ -554,6 +556,7 @@ chmod 755 strcomp.sh
 ./strcomp.sh 
 ## OUTPUT
 
+![Alt text](images/.strcomp(OUT).png)
 
 # check file ownership
 cat < psswdperm.sh 
@@ -581,10 +584,12 @@ fi
 ./psswdperm.sh
 ## OUTPUT
 
+![Alt text](images/psswdperm.png)
+
 # check if with file location
-cat>ifnested.sh 
+cat<ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -626,8 +631,9 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-
-
+![Alt text](images/ifnested1.png)
+![Alt text](images/ifnested2.png)
+![Alt text](images/ifnested(output).png)
 
 # using numeric test comparisons
 cat > iftest.sh 
@@ -669,7 +675,9 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
+## OUTPUT
+![Alt text](images/iftest1.png)
+![Alt text](images/iftest2.png)
 
 # check if a file
 cat > ifnested.sh 
@@ -718,8 +726,10 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
-
+## OUTPUT
+![Alt text](images/ifnested1.png)
+![Alt text](images/ifnested2.png)
+![Alt text](images/ifnested3.png)
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
@@ -747,7 +757,9 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+![Alt text](images/elifcheck.png)
+![Alt text](images/elifcheck1.png)
+![Alt text](images/elifcheck2.png)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -763,6 +775,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+![Alt text](images/ifcompound.png)
 
 # using the case command
 cat >casecheck.sh 
@@ -782,7 +795,7 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
- 
+ ![Alt text](images/casecheck.png)
 cat > whiletest
 ```bash
 #!/bin/bash
