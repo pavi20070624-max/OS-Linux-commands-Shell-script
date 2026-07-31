@@ -726,6 +726,7 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
+
 ## OUTPUT
 ![Alt text](images/ifnested1.png)
 ![Alt text](images/ifnested2.png)
@@ -773,6 +774,7 @@ echo "I cannot write to the file"
 fi
 ```
 $ chmod 755 ifcompound.sh
+
 $ ./ifcompound.sh 
 ## OUTPUT
 ![Alt text](images/ifcompound.png)
@@ -888,7 +890,10 @@ done
 ````
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
+
 ## OUTPUT
+
+![Alt text](images/forctype.png)
 
 cat forctype1.sh 
 ```bash
@@ -902,6 +907,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+![Alt text](images/forctype1.png)
 
 cat fornested1.sh 
 ```bash
@@ -919,8 +925,9 @@ done
 $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
- ## OUTPUT
 
+ ## OUTPUT
+![Alt text](images/fornested1.png)
  
 cat forbreak.sh 
 ```bash
@@ -934,15 +941,18 @@ break
 fi
 echo "Iteration number: $var1"
 done
-echo "The for loop is completed“
+echo "The for loop is completed"
 ```
-## OUTPUT
+
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
- 
-cat forbreak.sh 
+
+ ## OUTPUT
+ ![Alt text](images/forbreak.png)
+
+cat forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -954,7 +964,7 @@ continue
 fi
 echo "Iteration number: $var1"
 done
-echo "The for loop is completed“
+echo "The for loop is completed"
 ```
 
  
@@ -962,14 +972,15 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+![Alt text](images/forcontinue.png)
+
 cat exread.sh 
 ```bash
 #!/bin/bash
 # testing the read command
 echo -n "Enter your name: "
 read name
-echo "Hello $name, welcome to my program. "
+echo "Hello $name, welcome to my program."
  ```
  
 $ chmod 755 exread.sh 
@@ -977,21 +988,8 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+![Alt text](images/exread.png)
 
- cat exread1.sh
-```bash
-#!/bin/bash
-# testing the read command
-read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
-``` 
-$ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
-$ ./exread1.sh 
  
 cat funcex.sh
 ```bash
@@ -1008,13 +1006,13 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
  ./funcex.sh 
 
- 
  ./funcex.sh 1 2
 
- 
+## OUTPUT
+![Alt text](images/funcex.png)
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1024,41 +1022,13 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
+$ ./argshift.sh 1 2 3
 
 ## OUTPUT
-$ ./argshift.sh 1 2 3
- 
- cat argshift1.sh
-```bash
- #/bin/bash 
- # store arguments in a special array 
-args=("$@") 
-# get number of elements 
-ELEMENTS=${#args[@]} 
- # echo each element in array  
-# for loop 
-for (( i=0;i<$ELEMENTS;i++)); do 
-    echo ${args[${i}]} 
-done
-```
-$ chmod 777 argshift.sh
-## OUTPUT
-$ ./argshift.sh 1 2 3
- 
-cat argshift.sh
-```bash
-#!/bin/bash 
-set -x 
-while (( "$#" )); do 
-  echo $1 
-  shift 
-done
-set +x
-```
-## OUTPUT
- ./argshift.sh 1 2 3
- 
- 
+
+![Alt text](images/argshift.png)
+
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1088,7 +1058,9 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![Alt text](images/awk1.png)
+ ![Alt text](images/awk2.png)
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1115,7 +1087,8 @@ else
 fi
 ```
 ## OUTPUT 
-
+![Alt text](images/palindrome1.png)
+![Alt text](images/palindrome2.png)
 
 # RESULT:
 The Commands are executed successfully.
